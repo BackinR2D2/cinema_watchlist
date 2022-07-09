@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {useState, useEffect, useRef} from 'react';
+import {useState, useEffect} from 'react';
 import url from '../helpers/url';
 import CinemaElement from './static/CinemaElement';
 import { Input, useToast } from '@chakra-ui/react';

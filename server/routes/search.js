@@ -4,14 +4,16 @@ const client = require('../db/redis');
 
 async function getCachedSearch (query) {
     const search = await client.get(`${query}`);
-    return search;
+    console.log(search);
+    if(search) return search;
+    return null;
 }
 
 router.post('/search', async (req, res) => {
     try {
         const userInput = req.body;
-        const cachedSearch = await getCachedSearch(userInput);
-        if(cachedSearch.length !== 2) {
+        const cachedSearch = await getCachedSearch(userInput.res);
+        if(cachedSearch) {
             res.json({
                 results: JSON.parse(cachedSearch),
             })
@@ -25,7 +27,7 @@ router.post('/search', async (req, res) => {
             }
         });
             const results = response.data.d && response.data.d.filter(el => el.q !== undefined);
-            await client.set(`${userInput}`, JSON.stringify(results), {
+            await client.set(`${userInput.res}`, JSON.stringify(results), {
                 EX: process.env.REDIS_EXPIRE_TIME,
             });
             res.json({
