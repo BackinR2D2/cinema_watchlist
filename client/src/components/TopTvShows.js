@@ -17,7 +17,7 @@ function TopTvShows () {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if(localStorage.getItem('topTvShows')) {
+        if(JSON.parse(localStorage.getItem('topTvShows'))) {
             setTopTvShows(JSON.parse(localStorage.getItem('topTvShows')));
             setCopiedTopTvShows(JSON.parse(localStorage.getItem('topTvShows')));
             setLoading(false);
@@ -55,7 +55,7 @@ function TopTvShows () {
             setSearch(false);
         } else {
             const searchedTvShows = copiedTopTvShows.map(tvshow => {
-                const tvShowConfigured = (tvshow.title).toLowerCase().trim();
+                const tvShowConfigured = (tvshow.title) && (tvshow.title).toLowerCase().trim();
                 if(tvShowConfigured.indexOf(searchInput) !== -1 || tvshow.imdbId.indexOf(searchInput) !== -1) {
                     return tvshow;
                 }

@@ -17,7 +17,7 @@ function TopMovies () {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if(localStorage.getItem('topMovies')) {
+        if(JSON.parse(localStorage.getItem('topMovies'))) {
             setTopMovies(JSON.parse(localStorage.getItem('topMovies')));
             setCopiedTopMovies(JSON.parse(localStorage.getItem('topMovies')));
             setLoading(false);
@@ -55,7 +55,7 @@ function TopMovies () {
             setSearch(false);
         } else {
             const searchedMovies = copiedTopMovies.map(movie => {
-                const movieConfigured = (movie.title).toLowerCase().trim();
+                const movieConfigured = (movie.title) && (movie.title).toLowerCase().trim();
                 if(movieConfigured.indexOf(searchInput) !== -1 || movie.imdbId.indexOf(searchInput) !== -1) {
                     return movie;
                 }

@@ -95,7 +95,7 @@ function Movies () {
         clearTimeout(typingTimer.current);
         if(e.target.value !== '') {
             typingTimer.current = setTimeout(async () => {
-                let res = (e.target.value).toLowerCase().trim();
+                let res = (e.target.value) && (e.target.value).toLowerCase().trim();
                 await getMoviesSearch(res);
             }, 500);
         } else {
