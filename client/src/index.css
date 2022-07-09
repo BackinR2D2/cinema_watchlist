@@ -1,0 +1,319 @@
+#responsive-navbar-nav>div.me-auto.navbar-nav>div>a {
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+}
+
+#responsive-navbar-nav>div.me-auto.navbar-nav>div>a:hover {
+    color: gray;
+}
+
+#root>nav>span>a {
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+}
+
+#root>nav>span>a:hover {
+    color: gray;
+}
+
+#root {
+    height: 100vh;
+}
+
+.registerForm {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 20vh;
+    padding: 4vw;
+    border: 1px solid transparent;
+    border-radius: 2%;
+    /* background-color: #81A4CD; */
+}
+
+.formFooter {
+    margin: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.detailsContainer {
+    height: 92vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 4%;
+    /* margin: 4%; */
+}
+
+.ck.ck-editor__editable_inline {
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+#mediaBtn[active="yes"] {
+    background-color: yellow;
+}
+
+.addedToFavorites {
+    background-color: yellow;
+}
+
+.seachContainer {
+    padding: 4%;
+    text-align: center;
+}
+
+.card-img-top {
+    object-fit: contain;
+    /* height: 40vh; */
+}
+
+.pagination {
+    justify-content: center;
+}
+
+.header {
+    text-align: center;
+    padding: 4%;
+    font-size: 2em;
+    font-weight: 100;
+}
+
+.navbar-nav .nav-link {
+    padding: 10px;
+    font-size: 16px;
+    opacity: 0.8;
+    background: #f8f9fb;
+    border-radius: 8px;
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+    margin: 12px;
+}
+
+.nav-link:hover {
+    border-radius: 8px;
+    background-color: gray;
+}
+
+#page-numbers {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.searchInp {
+    text-align: center;
+    padding: 2% 6% 2% 6%;
+}
+
+.loading {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hpInp {
+    text-align: center;
+    padding: 12% 12% 4% 12%;
+}
+
+.mediaCard {
+    /* background-position: center center; */
+    /* background-size: cover; */
+    /* height: 40vh; */
+    /* width: auto; */
+    width: 20rem;
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+}
+
+.mediaCard:hover {
+    transform: scale(1.02);
+}
+
+.mediaCardInfo {
+    float: right;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: 1000;
+    width: 20rem;
+    /* background-color: rgba(51, 170, 51, .7); */
+    background: hsla(0, 0%, 0%, 1);
+
+    background: linear-gradient(360deg, hsla(0, 0%, 0%, 1) 0%, hsla(0, 0%, 0%, 0) 100%);
+
+    background: -moz-linear-gradient(360deg, hsla(0, 0%, 0%, 1) 0%, hsla(0, 0%, 0%, 0) 100%);
+
+    background: -webkit-linear-gradient(360deg, hsla(0, 0%, 0%, 1) 0%, hsla(0, 0%, 0%, 0) 100%);
+    border-radius: 24px;
+    padding: 20px;
+    color: #FFFFFF;
+    text-align: left;
+}
+
+.lazy-load-image-background {
+    width: 100%;
+}
+
+.mediaTitle {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    word-break: break-word;
+    padding-bottom: 6px;
+}
+
+.mediaYear {
+    font-size: 16px;
+    font-weight: 100;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+
+/* > 90% = green.
+89–80% = yellow/green.
+79–70% = yellow.
+69–60% = orange.
+59–50% = red. */
+
+.mediaRating {
+    margin-right: 10px;
+    padding: 4px;
+    padding-right: 8px;
+    padding-left: 8px;
+    border-radius: 8px;
+}
+
+.lazy-load-image-background:hover {
+    cursor: pointer;
+}
+
+.detailsTitle {
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 2%;
+}
+
+.detailsYear {
+    margin-left: 12px;
+    font-weight: 100;
+}
+
+.detailsRating {
+    margin-left: 12px;
+    padding: 4px 8px 4px 8px;
+    border-radius: 8px;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.detailsRunTime,
+.detailsRated {
+    margin-left: 12px;
+    font-weight: 200;
+}
+
+.detailsGenre {
+    font-size: 18px;
+    font-weight: 400;
+    padding-bottom: 1%;
+}
+
+.detailsPlot,
+.detailsLanguage,
+.detailsDirector,
+.detailsWriter,
+.detailsActors,
+.detailsAwards,
+.detailsCountry,
+.detailsType {
+    font-size: 16px;
+    padding-bottom: 1%;
+}
+
+.detailsAdd {
+    width: fit-content;
+    margin-top: 2%;
+}
+
+.userData {
+    text-align: center;
+    padding-bottom: 4%;
+}
+
+.userMail {
+    padding: 6px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.userCreatedAt,
+.userLastLogin {
+    padding: 6px;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.moviesOptions,
+.tvShowsOptions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+}
+
+.filter {
+    width: 25% !important;
+}
+
+body {
+    overflow-y: scroll;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+}
+
+body::-webkit-scrollbar {
+    /* WebKit */
+    width: 0;
+    height: 0;
+}
+
+.btnsGroup {
+    margin-right: 12px;
+    padding: 8px;
+}
+
+button.btn {
+    font-size: 18px;
+}
+
+@media (max-width: 1260px) {
+    .detailsContainer {
+        flex-direction: column;
+        margin: 4%;
+        height: auto;
+    }
+
+    .details {
+        text-align: center;
+    }
+
+    .detailsAdd {
+        margin: 2% auto;
+    }
+}
+
+@media (max-width: 652px) {
+    .css-1cylvnt {
+        justify-items: center;
+    }
+}
