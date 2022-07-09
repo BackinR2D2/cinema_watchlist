@@ -123,10 +123,6 @@
 }
 
 .mediaCard {
-    /* background-position: center center; */
-    /* background-size: cover; */
-    /* height: 40vh; */
-    /* width: auto; */
     width: 20rem;
     transition: all .4s ease;
     -webkit-transition: all .4s ease;

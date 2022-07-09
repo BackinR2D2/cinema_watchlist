@@ -19,7 +19,7 @@ function TopTvShows () {
     useEffect(() => {
         if(localStorage.getItem('topTvShows')) {
             setTopTvShows(JSON.parse(localStorage.getItem('topTvShows')));
-            copiedTopTvShows.current = JSON.parse(localStorage.getItem('topTvShows'));
+            setCopiedTopTvShows(JSON.parse(localStorage.getItem('topTvShows')));
             setLoading(false);
         } else {
             let active = true;

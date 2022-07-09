@@ -19,7 +19,7 @@ function TopMovies () {
     useEffect(() => {
         if(localStorage.getItem('topMovies')) {
             setTopMovies(JSON.parse(localStorage.getItem('topMovies')));
-            copiedTopMovies.current = JSON.parse(localStorage.getItem('topMovies'));
+            setCopiedTopMovies(JSON.parse(localStorage.getItem('topMovies')));
             setLoading(false);
         } else {
             let active = true;
