@@ -4,7 +4,6 @@ const client = require('../db/redis');
 
 async function getCachedSearch (query) {
     const search = await client.get(`${query}`);
-    console.log(search);
     if(search) return search;
     return null;
 }
@@ -35,7 +34,6 @@ router.post('/search', async (req, res) => {
             });
         }  
     } catch (error) {
-        console.log(error);
         res.status(500).json({
             status: 0,
             message: 'Server Error'

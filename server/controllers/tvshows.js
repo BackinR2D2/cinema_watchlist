@@ -54,7 +54,6 @@ async function getTvShowsCount (req, res, next) {
 async function searchTvShows (req, res, next) {
     try {
         const {searchInp, page} = req.query;
-        console.log(searchInp, page);
         const userId = req.user.id;
         const offset = (page - 1) * 10;
         const countList = await db('user_list').count('*').whereRaw(`type='tvshow' AND user_id=${userId} AND lower(info->>'title') ~ trim(lower('${searchInp}'))`);
@@ -65,7 +64,6 @@ async function searchTvShows (req, res, next) {
             countList: countList[0].count
         });
     } catch (error) {
-        console.log(error);
         res.status(500).json({
             status: 0,
             message: error.message || 'Server error'

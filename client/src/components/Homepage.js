@@ -22,7 +22,6 @@ function Homepage () {
     const getData = async (res) => {
         try {
             const response = await axios.post(`${url}/search`, {res});
-            console.log(response.data);
             setResults(response.data.results || []);
             setSearched(false);
             setInitial(true);

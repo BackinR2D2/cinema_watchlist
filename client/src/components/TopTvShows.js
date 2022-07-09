@@ -30,7 +30,6 @@ function TopTvShows () {
                 try {
                     const res = await axios.get(`${url}/top-tvshows`);
                     if(!active) {return}
-                    console.log(res.data.data);
                     setTopTvShows(res.data.data);
                     setLoading(false);
                     setCopiedTopTvShows(res.data.data);

@@ -39,7 +39,6 @@ function Register () {
                 setIsOpen(true);
             }
         } catch(error) {
-            console.log(error.response);
             if(error.response.status === 400) {
                 toast({
                     title: 'Invalid email or password.',

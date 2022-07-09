@@ -2,7 +2,6 @@ const db = require('../db');
 
 async function addToWatchlist (req, res, next) {
     try {
-        console.log(req.body)
         const mediaData = (req.body.info)[0];
         const mediaType = (req.body.info)[1];
         const userId = req.user.id;
@@ -25,7 +24,6 @@ async function addToWatchlist (req, res, next) {
             });
         }
     } catch (error) {
-        console.log(error);
         res.status(500).json({
             status: 0,
             message: error.message || 'Server Error'
@@ -57,7 +55,6 @@ async function deleteWatchlistMedia (req, res, next) {
     try {
         const mediaId = req.params.id;
         const userId = req.user.id;
-        console.log(mediaId, userId);
         await db('user_list').del().where({
             user_id: userId,
             id: mediaId
@@ -67,7 +64,6 @@ async function deleteWatchlistMedia (req, res, next) {
             message: 'Media deleted'
         });
     } catch (error) {
-        console.log(error);
         res.status(500).json({
             status: 0,
             message: error.message || 'Server Error'
@@ -90,7 +86,6 @@ async function updateNoteBody (req, res, next) {
             message: 'Note updated'
         });
     } catch (error) {
-        console.log(error);
         res.status(500).json({
             status: 0,
             message: error.message || 'Server Error'

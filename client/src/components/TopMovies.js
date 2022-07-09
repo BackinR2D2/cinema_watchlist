@@ -30,7 +30,6 @@ function TopMovies () {
                 try {
                     const res = await axios.get(`${url}/top-movies`);
                     if(!active) {return}
-                    console.log(res.data.data);
                     setTopMovies(res.data.data);
                     setLoading(false);
                     setCopiedTopMovies(res.data.data);
