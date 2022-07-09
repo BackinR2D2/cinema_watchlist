@@ -1,3 +1,4 @@
+require('dotenv').config();
 const env = process.env.NODE_ENV === 'production';
 const options = {
     client: 'pg',
@@ -12,6 +13,8 @@ const options = {
 };
 
 const productionOptions = {
+    client: 'pg',
+    version: '7.2',
     connection: process.env.DATABASE_URL,
 };
 

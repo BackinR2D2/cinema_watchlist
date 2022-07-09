@@ -22,7 +22,8 @@ app.get('/api/auth/validate', auth, (req, res) => {
     res.status(200).json({
         valid: true
     });
-})
+});
+
 app.use('/api', register);
 app.use('/api', login);
 app.use('/api', movies);
@@ -30,6 +31,12 @@ app.use('/api', tvshows);
 app.use('/api', require('./routes/search'));
 app.use('/api', watchlist);
 app.use('/api', account);
+
+app.get('*', (req, res) => {
+    res.status(404).json({
+        message: 'Not Found'
+    });
+});
 
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
