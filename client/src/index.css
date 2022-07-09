@@ -292,6 +292,10 @@ button.btn {
     font-size: 18px;
 }
 
+button.navbar-toggler {
+    margin-right: 12px;
+}
+
 @media (max-width: 1260px) {
     .detailsContainer {
         flex-direction: column;

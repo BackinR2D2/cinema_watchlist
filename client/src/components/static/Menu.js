@@ -15,7 +15,7 @@ function Menu ({showDetails, mediaInfo, id}) {
         let type = '';
         let data = {};
         try {
-            const URL = `http://www.omdbapi.com/?i=${id}&apikey=${omdb_API_KEY}`;
+            const URL = `https://www.omdbapi.com/?i=${id}&apikey=${omdb_API_KEY}`;
             const mediaData = await axios.get(URL);
 
             if(mediaData.data.Response === 'False' && mediaInfo !== undefined) {

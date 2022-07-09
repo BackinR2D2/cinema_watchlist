@@ -5,13 +5,11 @@ import { ChakraProvider } from '@chakra-ui/react'
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-document.addEventListener("DOMContentLoaded", function(event) {
-  ReactDOM.render(
+ReactDOM.render(
     <React.StrictMode>
       <ChakraProvider>
         <App />
       </ChakraProvider>
     </React.StrictMode>,
     document.getElementById('root')
-  );
-});
+);
