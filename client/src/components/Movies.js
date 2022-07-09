@@ -381,7 +381,7 @@ function Movies () {
         if(e.target.value === '') {
             setIsSelected(false);
             setType('default');
-            setMovies(defaultMovies);
+            // setMovies(defaultMovies);
             setMoviesCount(defaultMoviesCount);
             currentPage.current = 1;
             getMovies();
@@ -447,6 +447,14 @@ function Movies () {
             }
         }
     }
+
+    useEffect(() => {
+        if(Math.ceil(moviesCount / 10) === currentPage.current - 1 && currentPage.current !== 1) {
+            currentPage.current = currentPage.current - 1;
+            getMovies();
+            getMoviesCount();
+        }
+    }, [moviesCount])
 
     const removeFadeOut = ( el, speed ) => {
         const seconds = speed/1000;
@@ -620,7 +628,7 @@ function Movies () {
                                     </TableContainer>
                                 }
                             {
-                                moviesCount === 0 ?
+                                moviesCount === 0 || Math.ceil(moviesCount / 10) === 1 ?
                                     <></>
                                     :
                                     <div style={{textAlign: 'center', position: 'fixed', bottom: 0, right: 0, left: 0}}>

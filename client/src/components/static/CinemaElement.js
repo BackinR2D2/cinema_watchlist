@@ -130,7 +130,7 @@ class CinemaElement extends React.Component {
         const renderCinemaElements = currentCinemaElements && currentCinemaElements.map((cinemaEl, index) => {
             return (
                 <div style={{position: 'relative'}} className="mediaCard" key={index} data-id={cinemaEl.imdbId} >
-                    <LazyLoadImage onClick={() => this.props.handlePageChange(cinemaEl.imdbId)} title="More Details" style={{height: '40vh', objectFit: 'cover', borderRadius: '24px', width: '100%'}} alt={cinemaEl.title} effect={'blur'} src={replaceExt(cinemaEl.poster)} />
+                    <LazyLoadImage onClick={() => this.props.handlePageChange(cinemaEl.imdbId)} title="More Details" style={{objectFit: 'cover', borderRadius: '24px', width: '100%'}} alt={cinemaEl.title} effect={'blur'} src={replaceExt(cinemaEl.poster)} />
                     <div className="mediaCardInfo">
                         <h2 className="mediaTitle">{cinemaEl.title}</h2>
                         <p className="mediaYear">
@@ -193,7 +193,7 @@ class CinemaElement extends React.Component {
                 <ul className="padding0">
                     {
                         renderCinemaElements && renderCinemaElements.length !== 0 ?
-                            <SimpleGrid minChildWidth='280px' spacing='40px' style={{padding: '4em', justifyItems: 'center'}}>
+                            <SimpleGrid minChildWidth='280px' spacing='40px' style={{padding: '2em 1em 0 1em', justifyItems: 'center'}}>
                                 {renderCinemaElements}
                             </SimpleGrid>
                             :

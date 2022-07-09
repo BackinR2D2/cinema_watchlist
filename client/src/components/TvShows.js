@@ -382,7 +382,7 @@ function TvShows () {
         if(e.target.value === '') {
             setIsSelected(false);
             setType('default');
-            setTvShows(defaultTvShows.current);
+            // setTvShows(defaultTvShows.current);
             setTvShowsCount(defaultTvShowsCount.current);
             currentPage.current = 1;
             getTvShows();
@@ -448,6 +448,14 @@ function TvShows () {
             }
         }
     }
+
+    useEffect(() => {
+        if(Math.ceil(tvShowsCount / 10) === currentPage.current - 1 && currentPage.current !== 1) {
+            currentPage.current = currentPage.current - 1;
+            getTvShows();
+            getTvShowsCount();
+        }
+    }, [tvShowsCount]);
 
     const removeFadeOut = ( el, speed ) => {
         const seconds = speed/1000;
@@ -620,7 +628,7 @@ function TvShows () {
                             </TableContainer>
                         }
                     {
-                        tvShowsCount === 0 ?
+                        tvShowsCount === 0 || Math.ceil(tvShowsCount / 10) === 1?
                             <></>
                             :
                             <div style={{textAlign: 'center', position: 'fixed', bottom: 0, right: 0, left: 0}}>
