@@ -32,7 +32,7 @@ async function verify (req, res, next) {
             });
         }
     } catch (error) {
-        res.status(400).json({
+        res.status(500).json({
             status: 0,
             message: error.message
         });
@@ -53,7 +53,7 @@ async function register (req, res, next) {
             message: 'User created'
         });
     } catch (error) {
-        res.status(400).json({
+        res.status(500).json({
             status: 0,
             message: error.message
         });

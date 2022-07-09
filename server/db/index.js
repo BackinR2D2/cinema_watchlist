@@ -15,7 +15,10 @@ const options = {
 const productionOptions = {
     client: 'pg',
     version: '7.2',
-    connection: process.env.DATABASE_URL,
+    connection: {
+        connectionString: process.env.DATABASE_URL,
+        ssl: { rejectUnauthorized: false }
+    }
 };
 
 const knex = require('knex')(env ? productionOptions : options);
