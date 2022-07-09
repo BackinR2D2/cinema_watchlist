@@ -243,6 +243,8 @@ function TvShows () {
                     isClosable: true,
                     position: 'top-right',
                 });
+                currentPage.current = 1;
+                getTvShows();
             }
         } catch (error) {
             if(error.response.status === 403) {
@@ -347,6 +349,8 @@ function TvShows () {
                     'Authorization': 'Bearer ' + localStorage.getItem('auth')
                 }
             });
+            currentPage.current = 1;
+            getTvShows();
         }
         catch (error) {
             if(error.response.status === 403) {
@@ -380,6 +384,8 @@ function TvShows () {
             setType('default');
             setTvShows(defaultTvShows.current);
             setTvShowsCount(defaultTvShowsCount.current);
+            currentPage.current = 1;
+            getTvShows();
         } else {
             setType('filter');
             switch(e.target.value) {

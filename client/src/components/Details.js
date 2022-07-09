@@ -19,7 +19,7 @@ function Details (props) {
 
     const fetchDetails = async (id) => {
         try {
-            const url = `http://www.omdbapi.com/?i=${id}&apikey=${omdb_API_KEY}`;
+            const url = `https://www.omdbapi.com/?i=${id}&apikey=${omdb_API_KEY}`;
             const response = await axios.get(url);
             setData(response.data);
             setLoading(false);

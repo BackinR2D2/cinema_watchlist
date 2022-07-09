@@ -242,6 +242,8 @@ function Movies () {
                     isClosable: true,
                     position: 'top-right',
                 });
+                currentPage.current = 1;
+                getMovies();
             }
         } catch (error) {
             if(error.response.status === 403) {
@@ -346,6 +348,8 @@ function Movies () {
                     'Authorization': 'Bearer ' + localStorage.getItem('auth')
                 }
             });
+            currentPage.current = 1;
+            getMovies();
         }
         catch (error) {
             if(error.response.status === 403) {
@@ -379,6 +383,8 @@ function Movies () {
             setType('default');
             setMovies(defaultMovies);
             setMoviesCount(defaultMoviesCount);
+            currentPage.current = 1;
+            getMovies();
         } else {
             setType('filter');
             switch(e.target.value) {
