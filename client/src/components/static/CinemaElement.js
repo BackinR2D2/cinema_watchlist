@@ -193,7 +193,7 @@ class CinemaElement extends React.Component {
                 <ul className="padding0">
                     {
                         renderCinemaElements && renderCinemaElements.length !== 0 ?
-                            <SimpleGrid minChildWidth='280px' spacing='40px' style={{padding: '2em 1em 0 1em', justifyItems: 'center'}}>
+                            <SimpleGrid minChildWidth='280px' spacing='40px' style={{padding: '2em 1em 4em 1em', justifyItems: 'center'}}>
                                 {renderCinemaElements}
                             </SimpleGrid>
                             :
