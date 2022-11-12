@@ -4,11 +4,6 @@ let client;
 env
 	? (client = redis.createClient({
 			url: process.env.REDIS_URL,
-			socket: {
-				tls: true,
-				rejectUnauthorized: false,
-				connectTimeout: 50000,
-			},
 	  }))
 	: (client = redis.createClient());
 
