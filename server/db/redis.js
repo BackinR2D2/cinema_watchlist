@@ -3,7 +3,7 @@ const env = process.env.NODE_ENV === 'production';
 let client;
 env
 	? (client = redis.createClient({
-			url: process.env.REDIS_TLS_URL,
+			url: process.env.REDIS_URL,
 			socket: {
 				tls: true,
 				rejectUnauthorized: false,
